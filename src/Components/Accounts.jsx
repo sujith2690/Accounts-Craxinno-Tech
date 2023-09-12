@@ -24,6 +24,14 @@ const Accounts = ({ setAcc, setConditions }) => {
     return (
         <div className="account-list">
             <h2>Accounts</h2>
+            {userAcc.map((userAcc, i) => (
+                <div key={i} className='accOption'>
+                    <p>Acc No :{userAcc.count}</p>
+                    <p>Balance :{userAcc.balance}</p>
+                    <button onClick={() => handleClicked(userAcc)} className='btn'>Repayment Graph </button>
+                    <button onClick={() => handleClick(userAcc)} className='btn'>Repayment Method</button>
+                </div>
+            ))}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="balance">Balance input :</label>
                 <input
