@@ -11,8 +11,7 @@ const App = () => {
       <h1>Accounts Repayment</h1>
       <div style={{ display: 'flex', justifyContent: 'space-around' }} >
         <Accounts setConditions={setConditions} setAcc={setAcc} />
-        <Graph data={acc} />
-        <Payment data={acc} />
+        {conditions ? <Graph data={acc} /> : <Payment data={acc} />}
       </div>
     </div>)
 }

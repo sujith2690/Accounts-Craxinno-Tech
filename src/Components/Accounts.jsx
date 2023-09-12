@@ -9,7 +9,6 @@ const Accounts = ({ setAcc, setConditions }) => {
     const [balance, setBalance] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Balance input:', balance);
         const newAccount = {
             count: userAcc.length + 1,
             balance: parseFloat(balance) || 0,
@@ -19,8 +18,15 @@ const Accounts = ({ setAcc, setConditions }) => {
     };
     const handleInputChange = (e) => {
         setBalance(e.target.value);
-        console.log(e.target.value)
     };
+    const handleClicked = (data) => {
+        setAcc(data)
+        setConditions(true)
+    }
+    const handleClick = (data) => {
+        setAcc(data)
+        setConditions(false)
+    }
     return (
         <div className="account-list">
             <h2>Accounts</h2>
