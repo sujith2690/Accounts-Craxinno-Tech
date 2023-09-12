@@ -1,0 +1,13 @@
+.btn{
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.submitBtn{
+    padding: 5px;
+    margin-left: 5px;
+}
+.inputField{
+    outline: none;
+    padding: 5px 10px;
+}

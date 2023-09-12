@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addAccount } from '../Redux/accountSlice'
+import './Accounts.css'
 
 const Accounts = ({ setAcc, setConditions }) => {
     const userAcc = useSelector((state) => state.accountStore.accounts)
@@ -45,8 +46,9 @@ const Accounts = ({ setAcc, setConditions }) => {
                     id="balance"
                     value={balance}
                     onChange={handleInputChange}
+                    className='inputField'
                 />
-                <button type="submit">Submit</button>
+                <button className='submitBtn' type="submit">Submit</button>
             </form>
         </div>)
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Payment.css'
 
 
 const Payment = ({ data }) => {
@@ -49,12 +50,13 @@ const Payment = ({ data }) => {
                 <strong>Monthly Payment:</strong> $ {monthlyPayment}
             </div>
             <input
+            className='inp'
                 type="number"
                 value={monthlyPayment}
                 onChange={handleInputChange}
                 placeholder="Monthly Payment..."
             />
-            <button onClick={handleCalculate}>Calculate</button>
+            <button className='calculateBtn' onClick={handleCalculate}>Calculate</button>
             {balanceHistory.length > 0 && (
                 <div>
                     <h2>Balance Over Time:</h2>
