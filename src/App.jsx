@@ -13,7 +13,8 @@ const App = () => {
         <Accounts setConditions={setConditions} setAcc={setAcc} />
         {conditions ? <Graph data={acc} /> : <Payment data={acc} />}
       </div>
-    </div>)
+    </div>
+    )
 }
 
 export default App
